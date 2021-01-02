@@ -5,19 +5,21 @@ import QuoteApi from "../api/QuoteApi";
 export default class QuoteBox extends React.Component {
   state = {
     quotes: [],
-    quoteNumber: 0,
   }
 
   async componentDidMount() {
     QuoteApi.getQuote()
       .then(quotes => {
-        this.setState(() => ({ quotes }));
+        this.setState(() => ({
+          quotes,
+          quoteNumber: Math.floor(Math.random() * quotes.length),
+        }));
       });
   }
 
   handleClick = () => {
     this.setState(state => ({
-      quoteNumber: Math.floor(Math.random() * state.quotes.length)
+      quoteNumber: Math.floor(Math.random() * state.quotes.length),
     }));
   }
 
