@@ -1,18 +1,18 @@
 # Quote Box
----
+
 Displays random quotes from an API.
 
-*This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).**
+*This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Uses
----
+
 | Frameworks      |
 |-----------------|
 | React           |
 | React Bootstrap |
 
 ## Development
----
+
 In the project directory, you can run:
 
 ### `npm start`
