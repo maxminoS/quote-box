@@ -1,5 +1,6 @@
 import React from "react";
 import Quote from "components/Quote";
+import Tweet from "components/Tweet";
 import QuoteApi from "api/QuoteApi";
 
 export default class QuoteBox extends React.Component {
@@ -30,6 +31,9 @@ export default class QuoteBox extends React.Component {
           quote={this.state.quotes[this.state.quoteNumber]}
         />
         <button onClick={this.handleClick}>GET</button>
+        <Tweet
+          quote={this.state.quotes[this.state.quoteNumber]}
+        />
       </div>
     );
   }
