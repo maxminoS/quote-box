@@ -1,5 +1,6 @@
 import React from "react";
 import Quote from "./Quote";
+import QuoteApi from "../api/QuoteApi";
 
 export default class QuoteBox extends React.Component {
   state = {
@@ -8,9 +9,10 @@ export default class QuoteBox extends React.Component {
   }
 
   async componentDidMount() {
-    const response = await fetch('https://gist.githubusercontent.com/natebass/b0a548425a73bdf8ea5c618149fe1fce/raw/f4231cd5961f026264bb6bb3a6c41671b044f1f4/quotes.json');
-    const quotes = await response.json();
-    this.setState(() => ({ quotes }));
+    QuoteApi.getQuote()
+      .then(quotes => {
+        this.setState(() => ({ quotes }));
+      });
   }
 
   handleClick = () => {

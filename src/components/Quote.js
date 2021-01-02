@@ -4,9 +4,11 @@ export default props => (
   <div>
     <h3>{props.quote
          ? props.quote.quote
-         : ""}</h3>
+         : ""}
+    </h3>
     <p>- {props.quote
           ? props.quote.author
-          : ""}</p>
+          : ""}
+    </p>
   </div>
 );
