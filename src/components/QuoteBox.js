@@ -1,6 +1,6 @@
 import React from "react";
-import Quote from "./Quote";
-import QuoteApi from "../api/QuoteApi";
+import Quote from "components/Quote";
+import QuoteApi from "api/QuoteApi";
 
 export default class QuoteBox extends React.Component {
   state = {
