@@ -1,5 +1,6 @@
 import React, { Component } from "react";
-import 'App.css';
+import 'fontsource-roboto';
+
 import QuoteBox from "components/QuoteBox";
 
 class App extends Component {
