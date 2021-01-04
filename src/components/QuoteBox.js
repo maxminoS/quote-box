@@ -1,6 +1,9 @@
 import React from "react";
+import { Button } from "@material-ui/core";
+import { Card, CardContent, CardActions } from "@material-ui/core";
+
 import Quote from "components/Quote";
-import Tweet from "components/Tweet";
+import Share from "components/Share";
 import QuoteApi from "api/QuoteApi";
 
 export default class QuoteBox extends React.Component {
@@ -26,15 +29,21 @@ export default class QuoteBox extends React.Component {
 
   render() {
     return (
-      <div>
-        <Quote
-          quote={this.state.quotes[this.state.quoteNumber]}
-        />
-        <button onClick={this.handleClick}>GET</button>
-        <Tweet
-          quote={this.state.quotes[this.state.quoteNumber]}
-        />
-      </div>
+      <Card raised="true">
+        <CardContent>
+          <Quote
+            quote={this.state.quotes[this.state.quoteNumber]}
+          />
+        </CardContent>
+        <CardActions>
+          <Button variant="contained" color="secondary" onClick={this.handleClick}>
+            GET
+          </Button>
+          <Share
+            quote={this.state.quotes[this.state.quoteNumber]}
+          />
+        </CardActions>
+      </Card>
     );
   }
 }
