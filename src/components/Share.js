@@ -5,8 +5,7 @@ import { Twitter } from '@material-ui/icons';
 export default props => (
   <>
     {props.quote
-     ? <IconButton onClick={() => window.open("https://twitter.com/intent/tweet?text="
-                                              + escape("\"" + props.quote.quote + "\"\n- " + props.quote.author))
+     ? <IconButton onClick={() => window.open("https://twitter.com/intent/tweet?text=" + escape("\"" + props.quote.quote + "\"\n- " + props.quote.author))
                            }
        >
          <Twitter color="primary" fontSize="large" />
