@@ -11,7 +11,7 @@ export default () => {
           alignItems="center"
           style={{ minHeight: "100vh" }}
     >
-      <Grid item xs={8}>
+      <Grid item xs={8} lg={6} xl={4}>
         <QuoteBox />
       </Grid>
     </Grid>

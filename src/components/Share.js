@@ -9,7 +9,7 @@ export default props => (
                                               + escape("\"" + props.quote.quote + "\"\n- " + props.quote.author))
                            }
        >
-         <Twitter color="primary" />
+         <Twitter color="primary" fontSize="large" />
        </IconButton>
      : ""}
   </>

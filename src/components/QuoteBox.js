@@ -30,12 +30,12 @@ export default () => {
         />
       </CardContent>
       <CardActions>
-        <Button variant="contained" color="secondary" onClick={handleClick}>
-          GET
-        </Button>
         <Share
           quote={quotes[quoteNumber]}
         />
+        <Button variant="contained" color="secondary" style={{marginLeft: 'auto'}} onClick={handleClick}>
+          GET
+        </Button>
       </CardActions>
     </Card>
   );

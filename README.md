@@ -8,8 +8,8 @@ Displays random quotes from an API.
 
 | Frameworks      |
 |-----------------|
-| React           |
-| React Bootstrap |
+| ReactJS         |
+| Material UI     |
 
 ## Development
 
@@ -17,10 +17,8 @@ In the project directory, you can run:
 
 ### `npm start`
 
-Runs app in development mode.\
+Runs app in development mode, reloading on edits.\
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
-
-The page will reload if you make edits.
 
 ### TODO `npm test`
 
