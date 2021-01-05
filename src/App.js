@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { Grid } from "@material-ui/core";
 import 'fontsource-roboto';
 
 import QuoteBox from "components/QuoteBox";
@@ -6,9 +7,15 @@ import QuoteBox from "components/QuoteBox";
 class App extends Component {
   render() {
     return (
-      <div className="App">
-        <QuoteBox/>
-      </div>
+      <Grid container
+            justify="center"
+            alignItems="center"
+            style={{ minHeight: "100vh" }}
+      >
+        <Grid item xs={8}>
+          <QuoteBox />
+        </Grid>
+      </Grid>
     );
   }
 }
