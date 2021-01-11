@@ -7,8 +7,17 @@ export default props => (
     {props.quote
      ? <>
          <FormatQuote fontSize="large" />
-         <Typography variant="h6">{props.quote.quote}</Typography>
-         <Typography variant="subtitle1" align="right">- {props.quote.author}</Typography>
+         <Typography variant="h6"
+                     data-testid="quote-display"
+         >
+           {props.quote.quote}
+         </Typography>
+         <Typography variant="subtitle1"
+                     align="right"
+                     data-testid="author-display"
+         >
+           - {props.quote.author}
+         </Typography>
        </>
      : ""}
   </>
