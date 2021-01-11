@@ -23,7 +23,7 @@ export default () => {
   };
 
   return (
-    <Card raised="true">
+    <Card raised={true}>
       <CardContent>
         <Quote
           quote={quotes[quoteNumber]}
@@ -33,7 +33,12 @@ export default () => {
         <Share
           quote={quotes[quoteNumber]}
         />
-        <Button variant="contained" color="secondary" style={{marginLeft: 'auto'}} onClick={handleClick}>
+        <Button
+          variant="contained"
+          color="secondary"
+          style={{ marginLeft: 'auto' }}
+          onClick={handleClick}
+        >
           GET
         </Button>
       </CardActions>
