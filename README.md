@@ -6,10 +6,12 @@ Displays random quotes from an API.
 
 ## Uses
 
-| Frameworks      |
-|-----------------|
-| ReactJS         |
-| Material UI     |
+| Frameworks            |
+|-----------------------|
+| ReactJS               |
+| Material UI           |
+| Jest                  |
+| React Testing Library |
 
 ## Development
 
@@ -20,10 +22,9 @@ In the project directory, you can run:
 Runs app in development mode, reloading on edits.\
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
-### TODO `npm test`
+### `npm test`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Launches the test runner.
 
 ### `npm run build`
 
