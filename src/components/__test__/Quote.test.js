@@ -8,6 +8,6 @@ it('renders Quote component correctly', () => {
     "quote": "a quote",
     "author": "by this"
   }} />);
-  expect(screen.getByTestId("quote-display")).toHaveTextContent("a quote");
-  expect(screen.getByTestId("author-display")).toHaveTextContent("- by this");
+  expect(screen.getByText("a quote")).toBeInTheDocument();
+  expect(screen.getByText("- by this")).toBeInTheDocument();
 });
