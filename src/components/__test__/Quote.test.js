@@ -8,6 +8,7 @@ it('renders Quote component correctly', () => {
     "quote": "a quote",
     "author": "by this"
   }} />);
-  expect(screen.getByText("a quote")).toBeInTheDocument();
-  expect(screen.getByText("- by this")).toBeInTheDocument();
+
+  expect(screen.getByRole('heading', { name: /a quote/i })).toBeInTheDocument();
+  expect(screen.getByRole('heading', { name: /\- by this/i })).toBeInTheDocument();
 });
