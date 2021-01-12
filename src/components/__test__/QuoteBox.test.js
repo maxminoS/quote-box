@@ -1,6 +1,7 @@
 import React from 'react';
 import { render, screen } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
+import renderer from 'react-test-renderer';
 
 import QuoteBox from 'components/QuoteBox';
 import QuoteApi from "api/QuoteApi";
@@ -18,4 +19,9 @@ it('renders Quote component correctly and GET button works', async () => {
 
   userEvent.click(screen.getByRole('button', { name: /get/i }));
   QuoteApi.getQuote.mockRestore();
+});
+
+it('renders QuoteBox component as expected', () => {
+  const quoteBox = renderer.create(<QuoteBox />).toJSON();
+  expect(quoteBox).toMatchSnapshot();
 });
