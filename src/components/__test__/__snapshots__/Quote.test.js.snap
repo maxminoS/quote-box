@@ -1,0 +1,27 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders Quote component as expected 1`] = `
+Array [
+  <svg
+    aria-hidden={true}
+    className="MuiSvgIcon-root MuiSvgIcon-fontSizeLarge"
+    focusable="false"
+    viewBox="0 0 24 24"
+  >
+    <path
+      d="M6 17h3l2-4V7H5v6h3zm8 0h3l2-4V7h-6v6h3z"
+    />
+  </svg>,
+  <h6
+    className="MuiTypography-root MuiTypography-h6"
+  >
+    a quote
+  </h6>,
+  <h6
+    className="MuiTypography-root MuiTypography-subtitle1 MuiTypography-alignRight"
+  >
+    - 
+    by this
+  </h6>,
+]
+`;
