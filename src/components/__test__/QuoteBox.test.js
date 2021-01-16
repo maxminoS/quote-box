@@ -8,17 +8,22 @@ import QuoteApi from "api/QuoteApi";
 
 jest.mock('api/QuoteApi');
 
-it('renders Quote component correctly and GET button works', async () => {
-  jest.spyOn(QuoteApi, 'getQuote');
-  QuoteApi.getQuote.mockImplementation(() => Promise.resolve([{ "quote": "a quote", "author": "by this"}]));
+describe('QuoteBox', () => {
+  it('renders Quote component correctly', async () => {
+    jest.spyOn(QuoteApi, 'getQuote');
+    QuoteApi.getQuote.mockImplementation(() => Promise.resolve([{ "quote": "a quote", "author": "by this"}]));
+    render(<QuoteBox />);
 
-  render(<QuoteBox />);
-  expect(QuoteApi.getQuote).toHaveReturnedTimes(1);
-  expect(await screen.findByRole('heading', { name: /a quote/i })).toBeInTheDocument();
-  expect(await screen.findByRole('heading', { name: /\- by this/i })).toBeInTheDocument();
+    expect(QuoteApi.getQuote).toHaveReturnedTimes(1);
+    expect(await screen.findByRole('heading', { name: /a quote/i })).toBeInTheDocument();
+    expect(await screen.findByRole('heading', { name: /\- by this/i })).toBeInTheDocument();
+    QuoteApi.getQuote.mockRestore();
+  });
 
-  userEvent.click(screen.getByRole('button', { name: /get/i }));
-  QuoteApi.getQuote.mockRestore();
+  it('can click the GET button', () => {
+    render(<QuoteBox />);
+    userEvent.click(screen.getByRole('button', { name: /get/i }));
+  });
 });
 
 it('renders QuoteBox component as expected', () => {
