@@ -17,13 +17,12 @@ describe("Quote Box", () => {
     };
 
     // Click GET button
-    cy.get(".MuiButton-label")
-      .contains("GET").as("getButton");
-    cy.get("@getButton").click();
+    cy.clickGet();
 
     // Wait for new quote to load
     cy.get(".MuiCardContent-root > .MuiSvgIcon-root > path", { timeout: 30000 });
 
+    // Quote has changed
     cy.get("@quote").should("not.contain", firstQuote.quote);
     cy.get("@author").should("not.contain", firstQuote.author);
   });
