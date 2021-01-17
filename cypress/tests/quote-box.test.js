@@ -3,10 +3,14 @@ describe("Quote Box", () => {
     cy.visit("/");
   });
 
-  it("loads quotes with GET button", async () => {
+  beforeEach(() => {
     // Wait for quote to load
     cy.get(".MuiTypography-h6", { timeout: 30000 }).as("quote");
     cy.get(".MuiTypography-subtitle1", { timeout: 30000 }).as("author");
+  });
+
+  it("loads quotes with GET button", () => {
+    // Save first quote
     let firstQuote = {
       "quote": cy.get("@quote").invoke("text"),
       "author": cy.get("@author").invoke("text")
