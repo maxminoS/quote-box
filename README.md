@@ -12,6 +12,7 @@ Displays random quotes from an API.
 | Material UI           |
 | Jest                  |
 | React Testing Library |
+| Cypress               |
 
 ## Development
 
