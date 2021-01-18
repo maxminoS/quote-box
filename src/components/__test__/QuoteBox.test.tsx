@@ -4,20 +4,18 @@ import userEvent from '@testing-library/user-event';
 import renderer from 'react-test-renderer';
 
 import QuoteBox from 'components/QuoteBox';
-import QuoteApi from "api/QuoteApi";
-
-jest.mock('api/QuoteApi');
+import QuoteAPI from "api/QuoteAPI";
 
 describe('QuoteBox', () => {
   it('renders Quote component correctly', async () => {
-    jest.spyOn(QuoteApi, 'getQuote');
-    QuoteApi.getQuote.mockImplementation(() => Promise.resolve([{ "quote": "a quote", "author": "by this"}]));
+    const mockGetQuote = jest.spyOn(QuoteAPI, 'getQuote');
+    mockGetQuote.mockImplementation(() => Promise.resolve([{ "quote": "a quote", "author": "by this"}]));
     render(<QuoteBox />);
 
-    expect(QuoteApi.getQuote).toHaveReturnedTimes(1);
+    expect(QuoteAPI.getQuote).toHaveReturnedTimes(1);
     expect(await screen.findByRole('heading', { name: /a quote/i })).toBeInTheDocument();
     expect(await screen.findByRole('heading', { name: /\- by this/i })).toBeInTheDocument();
-    QuoteApi.getQuote.mockRestore();
+    mockGetQuote.mockRestore();
   });
 
   it('can click the GET button', () => {
