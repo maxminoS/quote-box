@@ -1,3 +1,4 @@
+/// <reference path="../support/index.d.ts" />
 describe("Quote Box", () => {
   beforeEach(() => {
     cy.visit("/");
