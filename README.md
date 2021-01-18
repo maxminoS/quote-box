@@ -8,6 +8,7 @@ Displays random quotes from an API.
 
 | Frameworks            |
 |-----------------------|
+| TypeScript            |
 | ReactJS               |
 | Material UI           |
 | Jest                  |
