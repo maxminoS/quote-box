@@ -2,7 +2,14 @@ import React from "react";
 import { Typography } from "@material-ui/core";
 import { FormatQuote } from "@material-ui/icons";
 
-export default props => (
+type Props = {
+  quote: {
+    quote: string,
+    author: string,
+  }
+}
+
+export default (props: Props) => (
   <>
     {props.quote
      ? <>

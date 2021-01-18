@@ -4,18 +4,25 @@ import { Card, CardContent, CardActions } from "@material-ui/core";
 
 import Quote from "components/Quote";
 import Share from "components/Share";
-import QuoteApi from "api/QuoteApi";
+import QuoteAPI from "api/QuoteAPI";
+
+type Quotes = {
+  quote: string,
+  author: string,
+}
 
 export default () => {
-  const [quotes, setQuotes] = useState([]);
+  const [quotes, setQuotes] = useState<Quotes[]>([]); // array of objects
   const [quoteNumber, setQuoteNumber] = useState(0);
 
-  useEffect(async () => {
-    QuoteApi.getQuote()
-      .then(quotes => {
-        setQuotes(quotes);
-        setQuoteNumber(Math.floor(Math.random() * quotes.length));
-      });
+  useEffect(() => {
+    (async () => {
+      QuoteAPI.getQuote()
+        .then(quotes => {
+          setQuotes(quotes);
+          setQuoteNumber(Math.floor(Math.random() * quotes.length));
+        });
+    })();
   }, []);
 
   const handleClick = () => {
