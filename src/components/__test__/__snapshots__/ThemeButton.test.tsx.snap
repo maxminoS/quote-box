@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`ThemeButton renders ThemeButton component as expected 1`] = `
+exports[`ThemeButton renders dark ThemeButton component as expected 1`] = `
 <div
   className="MuiGrid-root MuiGrid-item"
   style={
@@ -14,6 +14,61 @@ exports[`ThemeButton renders ThemeButton component as expected 1`] = `
   <button
     aria-describedby={null}
     className="MuiButtonBase-root MuiIconButton-root"
+    data-testid="theme-button"
+    disabled={false}
+    onBlur={[Function]}
+    onClick={[Function]}
+    onDragLeave={[Function]}
+    onFocus={[Function]}
+    onKeyDown={[Function]}
+    onKeyUp={[Function]}
+    onMouseDown={[Function]}
+    onMouseLeave={[Function]}
+    onMouseOver={[Function]}
+    onMouseUp={[Function]}
+    onTouchEnd={[Function]}
+    onTouchMove={[Function]}
+    onTouchStart={[Function]}
+    tabIndex={0}
+    title="Dark Mode"
+    type="button"
+  >
+    <span
+      className="MuiIconButton-label"
+    >
+      <svg
+        aria-hidden={true}
+        className="MuiSvgIcon-root"
+        focusable="false"
+        viewBox="0 0 24 24"
+      >
+        <path
+          d="M9 2c-1.05 0-2.05.16-3 .46 4.06 1.27 7 5.06 7 9.54 0 4.48-2.94 8.27-7 9.54.95.3 1.95.46 3 .46 5.52 0 10-4.48 10-10S14.52 2 9 2z"
+        />
+      </svg>
+    </span>
+    <span
+      className="MuiTouchRipple-root"
+    />
+  </button>
+</div>
+`;
+
+exports[`ThemeButton renders light ThemeButton component as expected 1`] = `
+<div
+  className="MuiGrid-root MuiGrid-item"
+  style={
+    Object {
+      "bottom": 8,
+      "position": "absolute",
+      "right": 8,
+    }
+  }
+>
+  <button
+    aria-describedby={null}
+    className="MuiButtonBase-root MuiIconButton-root"
+    data-testid="theme-button"
     disabled={false}
     onBlur={[Function]}
     onClick={[Function]}

@@ -1,0 +1,84 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders QuoteBox in dark theme as expected 1`] = `
+<DocumentFragment>
+  <div
+    class="MuiPaper-root MuiPaper-elevation1 MuiPaper-rounded"
+  >
+    <div
+      class="MuiGrid-root MuiGrid-container MuiGrid-align-items-xs-center MuiGrid-justify-xs-center"
+      style="min-height: 100vh;"
+    >
+      <div
+        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-8 MuiGrid-grid-lg-6 MuiGrid-grid-xl-4"
+      >
+        <div
+          class="MuiPaper-root MuiCard-root MuiPaper-elevation8 MuiPaper-rounded"
+        >
+          <div
+            class="MuiCardContent-root"
+          />
+          <div
+            class="MuiCardActions-root MuiCardActions-spacing"
+          >
+            <button
+              class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedSecondary"
+              style="margin-left: auto;"
+              tabindex="0"
+              type="button"
+            >
+              <span
+                class="MuiButton-label"
+              >
+                GET
+              </span>
+              <span
+                class="MuiTouchRipple-root"
+              />
+            </button>
+          </div>
+        </div>
+      </div>
+      <div
+        class="MuiGrid-root MuiGrid-item"
+        style="position: absolute; bottom: 8px; right: 8px;"
+      >
+        <button
+          class="MuiButtonBase-root MuiIconButton-root"
+          data-testid="theme-button"
+          tabindex="0"
+          title="Dark Mode"
+          type="button"
+        >
+          <span
+            class="MuiIconButton-label"
+          >
+            <svg
+              aria-hidden="true"
+              class="MuiSvgIcon-root"
+              focusable="false"
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="M9 2c-1.05 0-2.05.16-3 .46 4.06 1.27 7 5.06 7 9.54 0 4.48-2.94 8.27-7 9.54.95.3 1.95.46 3 .46 5.52 0 10-4.48 10-10S14.52 2 9 2z"
+              />
+            </svg>
+          </span>
+          <span
+            class="MuiTouchRipple-root"
+          >
+            <span
+              class="MuiTouchRipple-ripple MuiTouchRipple-rippleVisible"
+              style="width: 1px; height: 1px; top: -0.5px; left: -0.5px;"
+            >
+              <span
+                class="MuiTouchRipple-child MuiTouchRipple-childLeaving"
+              />
+            </span>
+          </span>
+        </button>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;

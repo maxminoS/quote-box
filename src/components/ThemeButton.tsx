@@ -16,7 +16,7 @@ export const ThemeButton = (props: Props) => (
         }}
   >
     <Tooltip title={ props.darkMode ? "Dark Mode" : "Light Mode"} placement="left" arrow>
-      <IconButton onClick={() => props.setDarkMode(!props.darkMode)}>
+      <IconButton onClick={() => props.setDarkMode(!props.darkMode)} data-testid="theme-button">
         { props.darkMode ? <Brightness3 /> : <WbSunny /> }
       </IconButton>
     </Tooltip>

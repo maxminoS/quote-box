@@ -11,8 +11,13 @@ describe('ThemeButton', () => {
     userEvent.click(screen.getByRole('button'));
   });
 
-  it('renders ThemeButton component as expected', () => {
-    const themeButton = renderer.create(<ThemeButton darkMode={false} setDarkMode={() =>  {}} />).toJSON();
-    expect(themeButton).toMatchSnapshot();
+  it('renders light ThemeButton component as expected', () => {
+    const themeButtonLight = renderer.create(<ThemeButton darkMode={false} setDarkMode={() =>  {}} />).toJSON();
+    expect(themeButtonLight).toMatchSnapshot();
+  });
+
+  it('renders dark ThemeButton component as expected', () => {
+    const themeButtonDark = renderer.create(<ThemeButton darkMode={true} setDarkMode={() =>  {}} />).toJSON();
+    expect(themeButtonDark).toMatchSnapshot();
   });
 })
