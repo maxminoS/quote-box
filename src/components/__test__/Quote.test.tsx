@@ -2,7 +2,7 @@ import React from 'react';
 import { render, screen } from '@testing-library/react';
 import renderer from 'react-test-renderer';
 
-import Quote from 'components/Quote';
+import { Quote } from 'components/Quote';
 
 it('renders Quote component correctly', () => {
   render(<Quote quote={{

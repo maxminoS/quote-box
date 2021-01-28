@@ -3,8 +3,8 @@ import { render, screen } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import renderer from 'react-test-renderer';
 
-import QuoteBox from 'components/QuoteBox';
-import QuoteAPI from "api/QuoteAPI";
+import { QuoteBox } from 'components/QuoteBox';
+import { QuoteAPI } from "api/QuoteAPI";
 
 describe('QuoteBox', () => {
   it('renders Quote component correctly', async () => {
