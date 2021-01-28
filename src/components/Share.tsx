@@ -1,5 +1,5 @@
 import React from "react";
-import { IconButton } from '@material-ui/core';
+import { Tooltip, IconButton } from '@material-ui/core';
 import { Twitter } from '@material-ui/icons';
 
 type Props = {
@@ -12,11 +12,13 @@ type Props = {
 export default (props: Props) => (
   <>
     {props.quote
-     ? <IconButton onClick={() => window.open("https://twitter.com/intent/tweet?text=" + encodeURIComponent("\"" + props.quote.quote + "\"\n- " + props.quote.author))
+     ? <Tooltip title="Tweet" arrow>
+         <IconButton onClick={() => window.open("https://twitter.com/intent/tweet?text=" + encodeURIComponent("\"" + props.quote.quote + "\"\n- " + props.quote.author))
                            }
-       >
-         <Twitter color="primary" fontSize="large" />
-       </IconButton>
+         >
+           <Twitter color="primary" fontSize="large" />
+         </IconButton>
+       </Tooltip>
      : ""}
   </>
 );
