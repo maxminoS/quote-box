@@ -21,9 +21,17 @@ export default () => {
         <Grid item xs={8} lg={6} xl={4}>
           <QuoteBox />
         </Grid>
-        <IconButton onClick={() => setDarkMode(!darkMode)}>
-          { darkMode ? <Brightness3 /> : <WbSunny /> }
-        </IconButton>
+        <Grid item
+              style={{
+                position: "absolute",
+                bottom: theme.spacing(2),
+                right: theme.spacing(2)
+              }}
+        >
+          <IconButton onClick={() => setDarkMode(!darkMode)}>
+            { darkMode ? <Brightness3 /> : <WbSunny /> }
+          </IconButton>
+        </Grid>
       </Grid>
     </Paper>
     </ThemeProvider>
