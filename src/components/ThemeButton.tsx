@@ -1,5 +1,5 @@
 import React from "react";
-import { Grid, IconButton } from '@material-ui/core';
+import { Grid, Tooltip, IconButton } from '@material-ui/core';
 import { Brightness3, WbSunny } from "@material-ui/icons";
 
 type Props = {
@@ -15,8 +15,10 @@ export default (props: Props) => (
           right: 8
         }}
   >
-    <IconButton onClick={() => props.setDarkMode(!props.darkMode)}>
-      { props.darkMode ? <Brightness3 /> : <WbSunny /> }
-    </IconButton>
+    <Tooltip title={ props.darkMode ? "Dark Mode" : "Light Mode"} placement="left" arrow>
+      <IconButton onClick={() => props.setDarkMode(!props.darkMode)}>
+        { props.darkMode ? <Brightness3 /> : <WbSunny /> }
+      </IconButton>
+    </Tooltip>
   </Grid>
 );
