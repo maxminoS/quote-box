@@ -7,7 +7,7 @@ type Props = {
   setDarkMode: React.Dispatch<React.SetStateAction<boolean>>
 }
 
-export default (props: Props) => (
+export const ThemeButton = (props: Props) => (
   <Grid item
         style={{
           position: "absolute",

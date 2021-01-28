@@ -9,7 +9,7 @@ type Props = {
   }
 }
 
-export default (props: Props) => (
+export const Share = (props: Props) => (
   <>
     {props.quote
      ? <Tooltip title="Tweet" arrow>

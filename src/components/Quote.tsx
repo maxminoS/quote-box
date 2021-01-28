@@ -9,7 +9,7 @@ type Props = {
   }
 }
 
-export default (props: Props) => (
+export const Quote = (props: Props) => (
   <>
     {props.quote
      ? <>

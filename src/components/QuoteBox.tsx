@@ -2,16 +2,16 @@ import React, { useState, useEffect } from "react";
 import { Button } from "@material-ui/core";
 import { Card, CardContent, CardActions } from "@material-ui/core";
 
-import Quote from "components/Quote";
-import Share from "components/Share";
-import QuoteAPI from "api/QuoteAPI";
+import { Quote }from "components/Quote";
+import { Share }from "components/Share";
+import { QuoteAPI }from "api/QuoteAPI";
 
 type Quotes = {
   quote: string,
   author: string,
 }
 
-export default () => {
+export const QuoteBox = () => {
   const [quotes, setQuotes] = useState<Quotes[]>([]); // array of objects
   const [quoteNumber, setQuoteNumber] = useState(0);
 

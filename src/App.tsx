@@ -1,12 +1,12 @@
 import React, { useState } from "react";
-import { Grid, Paper, IconButton } from "@material-ui/core";
+import { Grid, Paper } from "@material-ui/core";
 import { ThemeProvider, createMuiTheme } from "@material-ui/core/styles";
 import 'fontsource-roboto';
 
-import QuoteBox from "components/QuoteBox";
-import ThemeButton from "components/ThemeButton";
+import { QuoteBox } from "components/QuoteBox";
+import { ThemeButton } from "components/ThemeButton";
 
-export default () => {
+export const App = () => {
   const [darkMode, setDarkMode] = useState(false);
   const theme = createMuiTheme({ palette: { type: darkMode ? "dark" : "light" } });
 
