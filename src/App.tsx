@@ -1,10 +1,10 @@
 import React, { useState } from "react";
 import { Grid, Paper, IconButton } from "@material-ui/core";
 import { ThemeProvider, createMuiTheme } from "@material-ui/core/styles";
-import { Brightness3, WbSunny } from "@material-ui/icons";
 import 'fontsource-roboto';
 
 import QuoteBox from "components/QuoteBox";
+import ThemeButton from "components/ThemeButton";
 
 export default () => {
   const [darkMode, setDarkMode] = useState(false);
@@ -21,17 +21,7 @@ export default () => {
         <Grid item xs={8} lg={6} xl={4}>
           <QuoteBox />
         </Grid>
-        <Grid item
-              style={{
-                position: "absolute",
-                bottom: theme.spacing(2),
-                right: theme.spacing(2)
-              }}
-        >
-          <IconButton onClick={() => setDarkMode(!darkMode)}>
-            { darkMode ? <Brightness3 /> : <WbSunny /> }
-          </IconButton>
-        </Grid>
+        <ThemeButton darkMode={darkMode} setDarkMode={setDarkMode} />
       </Grid>
     </Paper>
     </ThemeProvider>
