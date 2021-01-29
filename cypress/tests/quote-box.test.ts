@@ -27,4 +27,11 @@ describe("Quote Box", () => {
     cy.get("@quote").should("not.contain", firstQuote.quote);
     cy.get("@author").should("not.contain", firstQuote.author);
   });
+
+  it("renders dark theme with the theme button", () => {
+    cy.get("[data-testid=theme-button]")
+      .snapshot({ name: "Light mode" })
+      .click()
+      .snapshot({ name: "Dark mode" });
+  });
 });
