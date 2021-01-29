@@ -24,7 +24,7 @@ In the project directory, you can run:
 Runs app in development mode, reloading on edits.\
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
-### `npm test`
+### `npm test` or `npm open`
 
 Launches the test runner.
 
